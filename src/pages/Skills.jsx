@@ -1,72 +1,63 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDatabase, FaTools } from "react-icons/fa";
-import { SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiSupabase, SiGit, SiGithub } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { SiBootstrap, SiExpress, SiFirebase, SiMaterialdesign, SiMongodb, SiSupabase, SiTailwindcss } from "react-icons/si";
 import Footer from "../components/Footer";
+import { SiJavascript } from "react-icons/si";
+
 
 const skillsData = [
-  {
-    category: "Frontend",
-    icon: <FaReact className="text-[#61DBFB]" />,
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
-  },
-  {
-    category: "Backend",
-    icon: <FaNodeJs className="text-green-500" />,
-    skills: ["Node.js", "Express.js", "REST API"],
-  },
-  {
-    category: "Databases",
-    icon: <FaDatabase className="text-yellow-500" />,
-    skills: ["MongoDB", "Firebase", "Supabase"],
-  },
-  {
-    category: "Tools",
-    icon: <FaTools className="text-gray-700" />,
-    skills: ["Git", "GitHub", "VS Code", "Postman"],
-  },
+  { name: "React", icon: <FaReact />, level: 100 },
+  { name: "JavaScript (ES6+)", icon: <SiJavascript />, level: 95 },
+  { name: "Node.js", icon: <FaNodeJs />, level: 90 },
+  { name: "Express.js", icon: <SiExpress />, level: 84 },
+  { name: "MongoDB", icon: <SiMongodb />, level: 88 },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 86 },
+  { name: "Git & GitHub", icon: <FaGitAlt />, level: 90 },
+  { name: "Firebase", icon: <SiFirebase />, level: 90 },
+  { name: "Supabase", icon: <SiSupabase />, level: 90 },
+  { name: "Bootstrap", icon: <SiBootstrap />, level: 90 },
+  { name: "Material UI", icon: <SiMaterialdesign />, level: 90 },
 ];
 
 export default function Skills() {
   return (
     <>
-      <section className="py-20 bg-[#F9FAFB]">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-bold text-center text-gray-800 mb-12"
-          >
-            My <span className="text-[#6366F1]">Skills</span>
-          </motion.h2>
+      <section className="py-16 px-6 md:px-16 bg-white" id="skills">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-semibold text-center text-gray-800 mb-10"
+        >
+          Skills & Technologies
+        </motion.h2>
 
-          {/* Skills Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {skillsData.map((group, i) => (
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {skillsData.map((skill, i) => (
               <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
+                key={skill.name}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-[#E0E7FF] rounded-xl p-6 text-center shadow hover:shadow-lg transition"
+                transition={{ delay: i * 0.12, duration: 0.45 }}
+                whileHover={{ scale: 1.03 }}
+                className="bg-[#E0E7FF] rounded-xl p-5 text-center shadow-sm hover:shadow-lg transition"
               >
-                <div className="text-4xl mb-3 flex justify-center">{group.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  {group.category}
-                </h3>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {group.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-white text-[#3730A3] rounded-full text-sm font-medium shadow-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="flex items-center justify-center mb-4">
+                  <div className="text-4xl text-[#6366F1]">{skill.icon}</div>
                 </div>
+
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">{skill.name}</h3>
+
+
+                <div className="w-full bg-white/60 rounded-full h-3 overflow-hidden border border-white/30">
+                  <div
+                    className="h-3 bg-[#6366F1] rounded-full"
+                    style={{ width: `${skill.level}%`, transition: "width 0.8s ease" }}
+                  />
+                </div>
+
+                <div className="mt-2 text-sm text-gray-700">{skill.level}%</div>
               </motion.div>
             ))}
           </div>

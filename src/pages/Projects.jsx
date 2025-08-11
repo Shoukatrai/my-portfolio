@@ -1,41 +1,35 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Footer } from "../components";
-
+import saylaniPapaImage from "../assets/saylani papa.png";
+import quizapp from "../assets/saylani papa.png";
+import ecommerce from "../assets/ecommerce.png";
 const projectsData = [
   {
-    title: "Portfolio Website",
+    title: "Food Delievery App",
     description:
-      "A personal portfolio built with React, Tailwind CSS, and Framer Motion to showcase my work and skills.",
-    image: "/projects/portfolio.png",
-    live: "https://your-portfolio-link.com",
-    github: "https://github.com/your-username/portfolio",
+      "Built a scalable food delivery platform using React.js and Node.js, enabling smooth user experiences with real-time order tracking. Leveraged Material-UI for a polished UI, MongoDB for data persistence, and Cloudinary for efficient media management.",
+    image: saylaniPapaImage,
+    live: "https://saylani-papa.netlify.app/",
+    github: "https://github.com/Shoukatrai/saylani-papa-frontend",
   },
   {
-    title: "E-Commerce Store",
+    title: "Quiz App With Firebase",
     description:
-      "Full-featured MERN stack e-commerce app with authentication, cart, and payment integration.",
-    image: "/projects/ecommerce.png",
-    live: "https://your-ecommerce-link.com",
-    github: "https://github.com/your-username/ecommerce",
+      "Developed an interactive quiz application using JavaScript, HTML, and CSS, with Firebase powering real-time database storage and user authentication.",
+    image: quizapp,
+    live: "https://quiz-quest-brown.vercel.app/",
+    github: "https://github.com/Shoukatrai/quiz-app-with-firebase",
   },
   {
-    title: "Task Manager",
+    title: "Ecommerce Plant Shopping",
     description:
-      "A task management web app with user authentication and CRUD functionality using MongoDB and Node.js.",
-    image: "/projects/taskmanager.png",
-    live: "https://your-taskmanager-link.com",
-    github: "https://github.com/your-username/task-manager",
+      "Developed a responsive e-commerce web app for plant shopping using React.js and CSS. Features include dynamic product listings, category filtering, and a modern, mobile-friendly interface designed to enhance the online shopping experience.",
+    image: ecommerce,
+    live: "https://shoukatrai.github.io/e-plantShopping/",
+    github: "https://github.com/Shoukatrai/e-plantShopping",
   },
-  {
-    title: "Blog Platform",
-    description:
-      "Multi-user blog platform built with React, Express, and MongoDB. Includes an admin panel and rich text editor.",
-    image: "/projects/blog.png",
-    live: "https://your-blog-link.com",
-    github: "https://github.com/your-username/blog-platform",
-  },
+
 ];
 
 export default function Projects() {
@@ -43,7 +37,6 @@ export default function Projects() {
     <>
       <section className="py-20 bg-[#F9FAFB]">
         <div className="max-w-6xl mx-auto px-6">
-          {/* Header */}
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +46,6 @@ export default function Projects() {
             My <span className="text-[#6366F1]">Projects</span>
           </motion.h2>
 
-          {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project, i) => (
               <motion.div

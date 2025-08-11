@@ -20,7 +20,7 @@ export default function About() {
           transition={{ duration: 1 }}
           className="flex-shrink-0 relative"
         >
-          <div className="absolute w-72 h-72 rounded-full bg-[#6366F1] blur-3xl opacity-20 animate-pulse"></div>
+          <div className="hidden md:block absolute w-72 h-72 rounded-full bg-[#6366F1] blur-3xl opacity-20 animate-pulse"></div>
           <img
             src={profile}
             alt="Shoukat Dev"

@@ -11,20 +11,20 @@ const Contact = () => {
         </h1>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
+        
           <div className="space-y-6">
             <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow">
               <FaEnvelope className="text-[#6366F1] text-2xl" />
               <div>
                 <p className="font-semibold text-gray-800">Email</p>
-                <p className="text-gray-600">shoukat@example.com</p>
+                <p className="text-gray-600">raishoukat033@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow">
               <FaPhone className="text-[#06B6D4] text-2xl" />
               <div>
                 <p className="font-semibold text-gray-800">Phone</p>
-                <p className="text-gray-600">+92 300 1234567</p>
+                <p className="text-gray-600">+92 347 3127706</p>
               </div>
             </div>
             <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow">
@@ -43,7 +43,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+     
           <form className="bg-white p-6 rounded-lg shadow space-y-4">
             <input type="text" placeholder="Your Name" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6366F1]" />
             <input type="email" placeholder="Your Email" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6366F1]" />

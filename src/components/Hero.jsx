@@ -15,7 +15,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 text-center md:text-left z-10"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-[#111827] leading-tight">
+        <h1 className="text-4xl mt-15 md:mt-10 md:text-6xl font-bold text-[#111827] leading-tight">
           Hi, I'm{" "}
           <span className="text-[#6366F1] relative">
             Shoukat Rai

@@ -7,12 +7,12 @@ export default function Contact() {
       id="contact"
       className="min-h-screen bg-gradient-to-b from-[#EEF2FF] to-[#E0F7FA] flex flex-col items-center px-6 py-20"
     >
-      {/* Title */}
+
       <h1 className="text-4xl font-bold mb-8 text-gray-800">
         Contact <span className="text-[#6366F1]">Me</span>
       </h1>
 
-      {/* Contact Form */}
+
       <form
         action="#"
         method="POST"
@@ -59,16 +59,16 @@ export default function Contact() {
         </button>
       </form>
 
-      {/* Social Links */}
+
       <div className="flex gap-6 mt-12">
         {[
           {
-            href: "https://github.com/yourusername",
+            href: "https://github.com/Shoukatrai",
             icon: <FaGithub />,
             color: "text-gray-700 hover:text-black",
           },
           {
-            href: "https://linkedin.com/in/yourusername",
+            href: "https://www.linkedin.com/in/shoukat-rai-750507245/",
             icon: <FaLinkedin />,
             color: "text-blue-600 hover:text-blue-800",
           },
@@ -78,7 +78,7 @@ export default function Contact() {
             color: "text-sky-500 hover:text-sky-700",
           },
           {
-            href: "mailto:youremail@example.com",
+            href: "raishoukat033@gmail.com",
             icon: <FaEnvelope />,
             color: "text-red-500 hover:text-red-700",
           },
