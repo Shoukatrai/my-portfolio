@@ -14,7 +14,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 relative z-10">
 
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -26,7 +26,21 @@ export default function About() {
             alt="Shoukat Dev"
             className="relative w-60 h-60 object-cover rounded-full shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border-4 border-[#6366F1] z-10"
           />
+        </motion.div> */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="flex-shrink-0 relative hidden md:block" // 👈 hides on small devices
+        >
+          <div className="absolute w-72 h-72 rounded-full bg-[#6366F1] blur-3xl opacity-20 animate-pulse"></div>
+          <img
+            src={profile}
+            alt="Shoukat Dev"
+            className="relative w-60 h-60 object-cover rounded-full shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border-4 border-[#6366F1] z-10"
+          />
         </motion.div>
+
 
 
         <motion.div

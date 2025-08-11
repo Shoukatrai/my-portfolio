@@ -5,17 +5,17 @@ import resumePDF from "../assets/Shoukat_Rai_Full_Stack_Developer_Resume.pdf";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-16 overflow-hidden rounded-lg">
+    <section className="relative min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-10 md:px-16 overflow-hidden rounded-lg">
 
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#6366F1] via-[#06B6D4] to-[#6366F1] animate-gradient-slow opacity-10"></div>
+      <div className=" absolute inset-0 bg-gradient-to-r from-[#6366F1] via-[#06B6D4] to-[#6366F1] animate-gradient-slow opacity-10"></div>
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 text-center md:text-left z-10"
       >
-        <h1 className="text-4xl mt-15 md:mt-10 md:text-6xl font-bold text-[#111827] leading-tight">
+        <h1 className="text-4xl  md:mt-10 md:text-6xl font-bold text-[#111827] leading-tight">
           Hi, I'm{" "}
           <span className="text-[#6366F1] relative">
             Shoukat Rai
@@ -58,7 +58,7 @@ const Hero = () => {
         <img
           src={profilePic}
           alt="Profile"
-          className="relative w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-[#6366F1] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] z-10"
+          className="mt-10 relative w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-[#6366F1] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] z-10"
         />
       </motion.div>
     </section>
